@@ -1,0 +1,184 @@
+body {
+    font-family: "Open Sans";
+    margin: 0;
+    padding: 0;
+}
+.nombre-principal {
+    font-size: 20px;
+}
+li {
+    list-style: none;
+    margin-right: 25px;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-list {
+    display: flex;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: #427A76;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+.titular {
+    text-align: center;
+    margin-top: 200px;
+}
+h1 {
+    font-size: 60px;
+    margin: 0;
+    color: #427A76;
+}
+h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+header {
+    background: url(./images/DiaSaludMental_1.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.container {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Arranca Sobre Mi*/
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+}
+.parrafo-sobre {
+    width: 42%;
+}
+.contenedor-sobre-mi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.parrafo-sobre p {
+    font-size: 14px;
+}
+.parrafo-sobre a {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Arranca Servicios*/
+.icon {
+    height: 30px;
+    background-color: white;
+    float: right;
+    border-radius: 5px;
+}
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.servicio {
+    width: 21%;
+    padding: 38px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.pine {
+    background-color: #016B61;
+}
+.sheen {
+    background-color: #70B2B2;
+}
+.servicio h4 {
+    font-size: 18px;
+    margin: 0;
+}
+.servicio p {
+    font-size: 14px;
+    height: 150px;
+}
+.contenedor-porques {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.porque-singular img {
+    height: 70px;
+}
+.contenedor-porques h4 {
+    margin: 0;
+    font-size: 20px;
+}
+.contenedor-porques p {
+    font-size: 14px;
+    line-height: 28px;
+}
+h5 {
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 40px;
+}
+#contactame {
+    background: linear-gradient(rgba(0, 139, 139,.94),rgba(102, 205, 170,.9));
+    text-align: center;
+    padding: 50px 0px;
+}
+.whatsapp {
+    height: 45px;
+}
+#whatsapp a {
+    background: none;
+    position: fixed;
+    top: 85%;
+    right: 1%;
+}
+.celmenu {
+    display: none;
+}
+@media (max-width: 480px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        background-color: rgba(0, 139, 139,.3);
+        width: 100%;
+        display: none;
+    }
+    nav .menu-list {
+        flex-direction: column;
+        display: flex;
+    }
+    .celmenu {
+        display: block;
+        height: 26px;
+    }
+    .titular {
+        margin-top: 54px;
+    }
+    h1 {
+        font-size: 49px;
+    }
+    h2 {
+        font-size: 19px;
+    }
+    .contenedor-sobre-mi {
+        flex-direction: column;
+    }
+    .parrafo-sobre {
+        width: 80%;
+    }
+    .contenedor-servicios {
+        flex-direction: column;
+    }
+}
