@@ -54,9 +54,10 @@ li {
     margin-top: 200px;
 }
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 40px;
-    color: black;
+    color: #132d2b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 header {
     background: url(./images/DiaSaludMental_1.jpg) center/cover no-repeat;
@@ -168,17 +169,17 @@ h3 {
   padding-bottom: 30px;
 }
 .servicio {
-    width: 25%;
-    padding: 38px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    color: #fff;
+  width: 25%;
+  padding: 38px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  color: #fff;
 }
 .icono-servicios {
-    height: 45px;
-    background-color: #fff;
-    border-radius: 15%;
-    float: right;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 15%;
+  float: right;
 }
 .oscuro {
     background: #5A9690;
@@ -197,14 +198,136 @@ h3 {
   display: inline-block;
 }
 h4 {
-    font-size: 35px;
+    font-size: 38px;
     text-align: center;
     font-weight: normal;
+    color: #132d2b;
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
+
 .parrafo-serv {
     font-size: 13px;
     text-align: justify;
 }
+
+/* SECCIÓN GENERAL */
+.faq-section {
+  position: relative;
+  padding: 0 80px 60px 80px;
+  background-color: white;
+  overflow: visible; /* permite que la imagen se superponga */
+}
+
+.faq-section h4 {
+  font-family: "Open Sans";
+  color: #132d2b;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 38px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* CONTENEDOR GENERAL: IMAGEN + CARRUSEL */
+.faq-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* antes: center */
+  align-items: center;
+  padding-left: 80px; /* agrega esta línea */
+}
+
+/* IMAGEN FUERA DEL CARRUSEL, SUPERPUESTA */
+.faq-icon {
+  position: absolute;
+  right: -30px; /* antes: 0 */
+  transform: translateX(-40%) translateY(0); /* antes: -30% */
+  width: 220px;
+  height: 220px;
+  opacity: 0.9;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* CONTENEDOR PRINCIPAL DEL CARRUSEL */
+.faq-container {
+  position: relative;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  padding: 30px 80px 60px 80px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* CARRUSEL */
+.faq-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* SLIDES */
+.faq-slide {
+  display: none;
+  animation: fade 0.6s ease;
+}
+
+.faq-slide.active {
+  display: block;
+}
+
+/* ANIMACIÓN */
+@keyframes fade {
+  from { opacity: 0; transform: translateX(15px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* TEXTO */
+h6 {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: #132d2b;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 15px;
+  text-align: justify;
+  color: #132d2b;
+  font-family: "Open Sans";
+  line-height: 1.7;
+  margin-top: 0;
+}
+
+/* CONTROLES */
+.faq-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.faq-controls button {
+  background-color: rgba(19, 45, 43, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.faq-controls button:hover {
+  background-color: #0e2624;
+}
+
+
+
 h5 {
     font-size: 18px;
     margin: 0;

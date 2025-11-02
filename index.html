@@ -13,6 +13,33 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <meta name="viewport" content="width=device-width, user-scaleable=no">
     </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll(".faq-slide");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+            });
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Mostrar la primera al cargar
+        showSlide(currentIndex);
+        });
+</script>
 
     <body>
 
@@ -121,6 +148,65 @@
         </div>    
     </div>
 </section>
+
+<!-- COMIENZA FREQUENTLY ASKED QUESTIONS  -->
+<section class="faq-section">
+  <h4>Preguntas Frecuentes (FAQ)</h4>
+
+  <div class="faq-wrapper">
+    <img class="faq-icon" src="./images/wonder-brain.webp" alt="Wonder Brain">
+
+    <div class="faq-container">
+      <div class="faq-carousel">
+        <div class="faq-slide active">
+          <h6>¿Cómo sé si necesito acudir a un psicólogo?</h6>
+          <p>Muchas personas buscan ayuda cuando sienten que sus estrategias habituales ya no son suficientes. Si notas ansiedad persistente, tristeza, irritabilidad, problemas en tus relaciones, dificultad para dormir o pérdida de motivación, la psicoterapia puede ayudarte a comprender y manejar lo que te ocurre.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Qué pasa en la primera sesión?</h6>
+          <p>En la primera cita el objetivo principal es conocerte y comprender tu motivo de consulta. Te haré preguntas sobre tu historia personal, tus síntomas, tus relaciones y tus objetivos. No es necesario que tengas todo claro; el proceso se construye juntos.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Cuánto dura un proceso psicológico?</h6>
+          <p>Depende del tipo de problema, la frecuencia de las sesiones y tus metas personales. Algunos procesos duran semanas; otros, varios meses. Lo importante es evaluar periódicamente los avances y ajustar el trabajo según tu evolución.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Qué se espera de mí en una terapia?</h6>
+          <p>Compromiso y participación activa. Se te pedirá reflexionar entre sesiones, realizar tareas o ejercicios y aplicar en tu vida cotidiana lo que se trabaja en consulta. El cambio ocurre tanto dentro como fuera de la sesión.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Qué tipo de problemas trata un sexólogo clínico?</h6>
+          <p>La sexología clínica aborda dificultades en el deseo, la excitación, el orgasmo o el dolor sexual, además de conflictos de pareja, orientación sexual, identidad de género y educación sexual. El objetivo no es solo resolver síntomas, sino mejorar la calidad de vida sexual y afectiva.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Qué pasa si tengo vergüenza o me cuesta hablar de temas sexuales?</h6>
+          <p>Es totalmente normal. El sexólogo está formado para tratar estos temas con respeto, sensibilidad y sin juicios. A medida que se genera confianza, la comunicación se vuelve más natural.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Puedo acudir solo o debo ir con mi pareja?</h6>
+          <p>Depende del motivo. Si el problema es individual (por ejemplo, baja libido o ansiedad sexual), puedes asistir solo. Si el conflicto implica a ambos miembros (como dificultades en la comunicación o en la vida sexual compartida), se recomienda la terapia de pareja o sexual conjunta.</p>
+        </div>
+
+        <div class="faq-slide">
+          <h6>¿Todo lo que diga en sesión es confidencial?</h6>
+          <p>Sí, absolutamente. La confidencialidad es una norma ética y legal. Solo se rompe si hay riesgo inminente para tu vida o la de otra persona, lo cual se explica desde el inicio del tratamiento.</p>
+        </div>
+      </div>
+
+      <div class="faq-controls">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- COMIENZA EL BLOG  -->
 <section id="blog">
