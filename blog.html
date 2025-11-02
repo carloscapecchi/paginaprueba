@@ -1,83 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Carlos Capecchi - Psicólogo</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, user-scaleable=no">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Carlos Capecchi - Blog</title>
+    <link rel="stylesheet" href="style-blog.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="menu">
+            <a href="./index.html">
+                <img class="logo" src="./images/logo capecchi fondo transparente-01.png" alt="logo-profesional-carlos">
+            </a>
+            <nav>
+                <ul class="menu-list">
+                    <li class="menu.btn"><a class="menu-btn-link" href="./sobremi.html">Sobre mi</a></li>
+                    <li class="menu.btn"><a class="menu-btn-link" href="./servicios.html">Servicios</a></li>
+                    <li class="menu.btn"><a class="menu-btn-link" href="./blog.html">Blog</a></li>
+                    <li class="menu.btn"><a class="menu-btn-link" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-    <body>
-        <header>
-              <div class="contenedor">
-                <div class="menu">
-                    <a href="./index.html">
-                    <img class="logo" src="./images/logo capecchi fondo transparente-01.png" alt="logo-profesional-carlos">
-                    </a>
-                    <nav>
-                        <ul class="menu-list">
-                            <li class="menu.btn"><a class="menu-btn-link" href="./sobremi.html">Sobre mi</a></li>
-                            <li class="menu.btn"><a class="menu-btn-link" href="./servicios.html">Servicios</a></li>
-                            <li class="menu.btn"><a class="menu-btn-link" href="./blog.html">Blog</a></li>
-                            <li class="menu.btn"><a class="menu-btn-link" href="./contacto.html">Contacto</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            
-            <div class="titular">
-                <h1>Blog</h1>                
-            </div>
+    <div class="titular">
+        <h1>Blog</h1>
+        <h2>Reflexiones, bienestar, psicología y sexología actuales</h2>            
+    </div>
 
-            <div class="contenedor-sobre">
-                <h2>Entrada de Blog</h2>
-                <p>abc</p>
-            </div>
-        </header>
+    <section class="blog-container">
+        <article class="post">
+            <img src="./images/pareja-toxica.jpg" alt="parejas-toxicas">
+            <h3><a href="entrada1.html">¿Cómo son las parejas tóxicas?</a></h3>
+            <p>Las relaciones tóxicas no siempre comienzan siendo evidentes; muchas veces se disfrazan de amor intenso o dependencia emocional.</p>
+        </article>
 
-        <style>
-            .logo {
-                width: 80px;
-                height: 80px;
-                margin-top: 10px;
-            }
-            h1 {
-                text-align: center;
-                font-family: "Open Sans";
-                font-size: 30px;
-            }
-            .menu-btn-link {
-                text-decoration: none;
-                color: black;
-            }
-            li {
-                list-style: none;
-                margin-right: 25px;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-                font-family: "Open Sans";
-            }
-            .menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .menu-list {
-                display: flex;
-            }
-            header {
-                background-color: burlywood;
-            }
-            .contenedor {
-                margin: auto;
-                width: 97%;
-                max-width: 1920px;
-            }
-        </style>
-    </body>
+        <article class="post">
+            <img src="./images/narcisism.jpg" alt="narcisismo">
+            <h3><a href="entrada2.html">Los peligros del narcisismo</a></h3>
+            <p>El narcisismo va mucho más allá del amor propio: puede convertirse en una forma de relación que gira en torno al poder, la manipulación y la falta de empatía.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/grief.png" alt="comprendiendo-el-duelo">
+            <h3><a href="entrada3.html">Comprendiendo el duelo</a></h3>
+            <p>El duelo no solo implica perder a alguien, sino también aprender a reconstruirse entre el dolor, la ausencia y la transformación interior.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/erectile-dysfunction.jpeg" alt="disfunción eréctil">
+            <h3><a href="entrada4.html">Disfunción eréctil: más allá del cuerpo</a></h3>
+            <p>En muchos casos, los factores psicológicos —como el estrés o la autoexigencia— son los principales responsables de la dificultad para mantener una erección.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/self-esteem.webp" alt="autoestima">
+            <h3><a href="entrada5.html">Autoestima: el arte de valorarse sin compararse</a></h3>
+            <p>La autoestima no se mide por logros ni por aprobación externa, sino por la relación que establecemos con nosotros mismos.</p>
+        </article>
+
+        <article class="post">
+           <img src="./images/sexual-desire.jpg" alt="deseo sexual">
+            <h3><a href="entrada6.html">El deseo sexual y sus altibajos</a></h3>
+            <p>El deseo no siempre se mantiene estable: factores psicológicos, emocionales y relacionales influyen en la forma en que conectamos eróticamente con el otro.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/depresion-vang.jpg" alt="depresion">
+            <h3><a href="entrada7.html">Depresión: más allá de la tristeza</a></h3>
+            <p>No es solo “estar triste”; la depresión altera la forma en que pensamos, sentimos y percibimos la vida cotidiana.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/forgiveness.jpg" alt="perdon">
+            <h3><a href="entrada8.html">El perdón como camino de liberación</a></h3>
+            <p>Perdonar no es justificar, sino soltar el peso emocional que nos impide avanzar y sanar.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/anorgasmia.jpg" alt="anorgasmia femenina">
+            <h3><a href="entrada9.html">Anorgasmia femenina: romper el silencio</a></h3>
+            <p>La dificultad para alcanzar el orgasmo es más común de lo que se piensa y suele estar relacionada con la educación sexual, la culpa y el miedo a la entrega.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/dependencia-emocional.jpg" alt="dependencia-emocional">
+            <h3><a href="entrada10.html">Dependencia emocional: amar sin perderte</a></h3>
+            <p>La dependencia emocional nos hace creer que sin el otro no podemos vivir, olvidando que el amor sano nace desde la autonomía.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/infidelidad.jpg" alt="infidelidad">
+            <h3><a href="entrada11.html">Infidelidad: síntomas de una relación que pide cambio</a></h3>
+            <p>La infidelidad no siempre nace del deseo de otro cuerpo, sino del intento inconsciente de llenar un vacío emocional o personal.</p>
+        </article>
+
+        <article class="post">
+            <img src="./images/comunicacion-en-pareja.jpeg" alt="comunicacion-pareja">
+            <h3><a href="entrada12.html">La comunicación en pareja</a></h3>
+            <p>Hablar no siempre significa comunicarse. La escucha activa y la empatía son pilares del entendimiento mutuo.</p>
+        </article>
+    </section>
+    <section id="whatsapp">
+        <a href="https://wa.me/593939283303">
+            <img class="whatsapp-icon" src="./images/WhatsApp.png">
+        </a>
+    </section>
+    <style>
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #cfd8dc 100%);
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    margin: 0 20px;
+    padding: 0;
+    height: 240vh;
+}
+
+/* Header y menú */
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #244d4a;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    font-family: "Open Sans";
+}
+h2 {
+    font-family: "Open Sans";
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 0;
+}
+
+.menu-btn-link {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style: none;
+    margin-right: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: "Open Sans";
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-list {
+    display: flex;
+}
+
+/* Título principal */
+
+
+/* Contenedor tipo periódico */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Entradas del blog */
+.post {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Open Sans";
+}
+
+.post:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post h3 {
+    color: #244d4a;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.post h3 a {
+    color: #244d4a;
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    text-decoration: underline;
+}
+
+.post p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 15px 20px;
+}
+#whatsapp a {
+    background: none;
+    position: fixed;
+    top: 85%;
+    right: 1%;
+}
+.whatsapp-icon {
+    height: 50px;
+}
+
+    </style>
+</body>
 </html>
