@@ -63,8 +63,29 @@
     </a>
 </section>
 
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".menu-list");
 
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Cierra el menú al hacer click en un enlace
+  document.querySelectorAll(".menu-list a").forEach(link =>
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+</script>
 
         </header>
 
@@ -196,21 +217,119 @@
             }
 
             /* RESPONSIVE */
+            @media (max-width: 480px) {
+                html, body {
+                    overflow-x: hidden;
+                    margin: 0;
+                    padding: 0;
+                }
+                * {
+                    box-sizing: border-box;
+                    max-width: 100%;
+                }
+                .menu-list {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 70%;
+                    height: 100vh;
+                    background-color: rgba(255, 255, 255, 0.97);
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 35px;
+                    transition: right 0.4s ease-in-out;
+                    z-index: 1000;
+                }
+                .menu-list.active {
+                    right: 0;
+                }
 
-            @media (max-width: 768px) {
-            .sobre-flex {
-                flex-direction: column;
-                align-items: center;
-            }
+                .menu-btn-link {
+                    font-size: 20px;
+                    color: #132d2b;
+                }
 
-            .sobre-imagen img {
-                width: 70%;
-                max-width: 300px;
-            }
+                .hamburger {
+                    display: block;
+                    position: fixed;
+                    top: 25px;
+                    right: 25px;
+                    width: 35px;
+                    height: 28px;
+                    cursor: pointer;
+                    z-index: 1100;
+                }
 
-            .sobre-texto {
-                width: 100%;
-            }
+                .hamburger span {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    background-color: #132d2b;
+                    margin-bottom: 6px;
+                    border-radius: 3px;
+                    transition: all 0.3s ease;
+                }
+
+                .hamburger.active span:nth-child(1) {
+                    transform: rotate(45deg) translate(6px, 6px);
+                }
+
+                .hamburger.active span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .hamburger.active span:nth-child(3) {
+                    transform: rotate(-45deg) translate(6px, -6px);
+                }
+                .logo {
+                    width: 65px;
+                    height: 65px;
+                    margin-left: 15px;
+                }
+                .titular {
+                    margin-top: 100px;
+                }
+
+                h1 {
+                    font-size: 32px;
+                    text-align: center;
+                    margin-top: 0;
+                }
+                .sobre-flex {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 25px;
+                    margin-top: 30px;
+                }
+
+                .sobre-imagen img {
+                    width: 80%;
+                    max-width: 260px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                .sobre-texto {
+                    width: 95%;
+                    text-align: justify;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                .parrafo-sobre {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+                .whatsapp-icon {
+                    height: 45px;
+                }
+                #whatsapp a {
+                    top: 88%;
+                    right: 4%;
+                }
             }
 
 

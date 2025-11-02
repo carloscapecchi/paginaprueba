@@ -64,7 +64,6 @@ header {
     height: 100vh;
     position: cover;
 }
-
 .contenedor {
     margin: auto;
     width: 97%;
@@ -210,7 +209,6 @@ h4 {
     font-size: 13px;
     text-align: justify;
 }
-
 /* SECCIÓN GENERAL */
 .faq-section {
   position: relative;
@@ -218,7 +216,6 @@ h4 {
   background-color: white;
   overflow: visible; /* permite que la imagen se superponga */
 }
-
 .faq-section h4 {
   font-family: "Open Sans";
   color: #132d2b;
@@ -229,7 +226,6 @@ h4 {
   font-size: 38px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
-
 /* CONTENEDOR GENERAL: IMAGEN + CARRUSEL */
 .faq-wrapper {
   position: relative;
@@ -238,7 +234,6 @@ h4 {
   align-items: center;
   padding-left: 80px; /* agrega esta línea */
 }
-
 /* IMAGEN FUERA DEL CARRUSEL, SUPERPUESTA */
 .faq-icon {
   position: absolute;
@@ -250,7 +245,6 @@ h4 {
   z-index: 3;
   pointer-events: none;
 }
-
 /* CONTENEDOR PRINCIPAL DEL CARRUSEL */
 .faq-container {
   position: relative;
@@ -262,7 +256,6 @@ h4 {
   overflow: hidden;
   z-index: 2;
 }
-
 /* CARRUSEL */
 .faq-carousel {
   position: relative;
@@ -278,7 +271,6 @@ h4 {
 .faq-slide.active {
   display: block;
 }
-
 /* ANIMACIÓN */
 @keyframes fade {
   from { opacity: 0; transform: translateX(15px); }
@@ -300,7 +292,6 @@ p {
   line-height: 1.7;
   margin-top: 0;
 }
-
 /* CONTROLES */
 .faq-controls {
   position: absolute;
@@ -309,7 +300,6 @@ p {
   display: flex;
   gap: 15px;
 }
-
 .faq-controls button {
   background-color: rgba(19, 45, 43, 0.8);
   color: white;
@@ -325,9 +315,6 @@ p {
 .faq-controls button:hover {
   background-color: #0e2624;
 }
-
-
-
 h5 {
     font-size: 18px;
     margin: 0;
@@ -419,16 +406,190 @@ h5 {
 .whatsapp-icon {
   height: 50px;
 }
+.redir-serv {
+  text-decoration: none;
+  color: white;
+}
+hr {
+  color: white;
+}
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 480px) {
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+  }
+  .menu-list.active {
+    right: 0;
+  }
+  .menu-btn-link {
+    font-size: 20px;
+    color: #132d2b;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #132d2b;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  .logo {
+    width: 65px;
+    height: 65px;
+    margin-left: 15px;
+  }
+
+  .titular {
+    margin-top: 130px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
   .contact-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+    padding: 0 20px;
   }
 
   .contact-form,
   .contact-info {
+    width: 100%;
     max-width: 100%;
+  }
+  .cajas-servicios {
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+  .servicio {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .icono-servicios {
+    height: 40px;
+  }
+  .faq-section {
+    padding: 20px;
+  }
+
+  .faq-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .faq-icon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    right: 0;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .faq-container {
+    padding: 20px;
+  }
+
+  .faq-controls {
+    right: 10px;
+    bottom: 10px;
+  }
+  .contenedor-publicaciones {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .publicaciones {
+    width: 85%;
+  }
+
+  #blog h4 {
+    font-size: 28px;
+  }
+  #footer h4 {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  .whatsapp-icon {
+    height: 45px;
+  }
+
+  #whatsapp a {
+    top: 88%;
+    right: 4%;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .services-container,
+  .service-card,
+  .service-item,
+  .servicios,
+  section {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* mantén separación sin desbordar */
+  }
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 95%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }

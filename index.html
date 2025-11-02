@@ -105,45 +105,60 @@
         <h4>Servicios</h4>
         <div class="cajas-servicios">
             <div class="servicio oscuro">
-                <h5>Psicoterapia Individual</h5>
-                <hr />
-                <p class="parrafo-serv">Un espacio de acompañamiento profesional para explorar tus emociones, pensamientos y comportamientos. A través del proceso terapéutico podrás fortalecer tus recursos personales, afrontar situaciones difíciles y mejorar tu bienestar emocional.</p>
-                <img class="icono-servicios" src="./images/Therapy.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Psicoterapia Individual</h5>
+                    <hr />
+                    <p class="parrafo-serv">Un espacio de acompañamiento profesional para explorar tus emociones, pensamientos y comportamientos. A través del proceso terapéutico podrás fortalecer tus recursos personales, afrontar situaciones difíciles y mejorar tu bienestar emocional.</p>
+                    <img class="icono-servicios" src="./images/Therapy.png">
+                </a>
             </div>
             
             <div class="servicio claro">
-                <h5>Evaluación Psicológica</h5>
-                <hr />
-                <p class="parrafo-serv">Un proceso riguroso y confidencial que permite comprender el funcionamiento emocional, cognitivo y conductual de la persona. Se utilizan pruebas estandarizadas para orientar diagnósticos, tratamientos o decisiones personales y laborales.</p>
-                <img class="icono-servicios" src="./images/Assessment.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Evaluación Psicológica</h5>
+                    <hr />
+                    <p class="parrafo-serv">Un proceso riguroso y confidencial que permite comprender el funcionamiento emocional, cognitivo y conductual de la persona. Se utilizan pruebas estandarizadas para orientar diagnósticos, tratamientos o decisiones personales y laborales.</p>
+                    <img class="icono-servicios" src="./images/Assessment.png">
+                </a>
             </div>
 
             <div class="servicio oscuro">
-                <h5>Terapia de Pareja</h5>
-                <hr />
-                <p class="parrafo-serv">Un espacio de diálogo guiado donde ambos miembros de la pareja pueden reencontrarse, mejorar la comunicación y reconstruir la confianza. El objetivo es promover vínculos más saludables y una convivencia basada en el respeto mutuo.</p>
-                <img class="icono-servicios" src="./images/Couple.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Terapia de Pareja</h5>
+                    <hr />
+                    <p class="parrafo-serv">Un espacio de diálogo guiado donde ambos miembros de la pareja pueden reencontrarse, mejorar la comunicación y reconstruir la confianza. El objetivo es promover vínculos más saludables y una convivencia basada en el respeto mutuo.</p>
+                    <img class="icono-servicios" src="./images/Couple.png">
+                </a>
             </div>
 
             <div class="servicio claro">
-                <h5>Terapia Sexual</h5>
-                <hr />
-                <p class="parrafo-serv">Dirigida a personas o parejas que enfrentan dificultades en su vida sexual. Se abordan temas como deseo, disfunciones o insatisfacción, favoreciendo una sexualidad más plena, libre de tabúes y conectada con el bienestar integral.</p>
-                <img class="icono-servicios" src="./images/Sex.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Terapia Sexual</h5>
+                    <hr />
+                    <p class="parrafo-serv">Dirigida a personas o parejas que enfrentan dificultades en su vida sexual. Se abordan temas como deseo, disfunciones o insatisfacción, favoreciendo una sexualidad más plena, libre de tabúes y conectada con el bienestar integral.</p>
+                    <img class="icono-servicios" src="./images/Sex.png">
+                </a>
+                
             </div>
 
             <div class="servicio oscuro">
-                <h5>Psicodiagnóstico Infanto-Juvenil</h5>
-                <hr />
-                <p class="parrafo-serv">Evaluación especializada que busca comprender el desarrollo emocional, cognitivo y social de niños y adolescentes. Permite detectar dificultades, orientar intervenciones y acompañar a las familias en el proceso de crecimiento.</p>
-                <img class="icono-servicios" src="./images/kids.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Infanto-Juvenil</h5>
+                    <hr />
+                    <p class="parrafo-serv">Evaluación especializada que busca comprender el desarrollo emocional, cognitivo y social de niños y adolescentes. Permite detectar dificultades, orientar intervenciones y acompañar a las familias en el proceso de crecimiento.</p>
+                    <img class="icono-servicios" src="./images/kids.png">
+                </a>
+                
             </div>
 
             <div class="servicio claro">
-                <h5>Asesoría Empresarial</h5>
-                <hr />
-                <p class="parrafo-serv">Servicio enfocado en el bienestar psicológico y el clima laboral dentro de las organizaciones. A través de la evaluación y orientación profesional, se promueve la productividad, la comunicación efectiva y la salud mental en el trabajo.</p>
-                <img class="icono-servicios" src="./images/Counselling.png">
+                <a class="redir-serv" href="servicios.html">
+                    <h5>Asesoría Empresarial</h5>
+                    <hr />
+                    <p class="parrafo-serv">Servicio enfocado en el bienestar psicológico y el clima laboral dentro de las organizaciones. A través de la evaluación y orientación profesional, se promueve la productividad, la comunicación efectiva y la salud mental en el trabajo.</p>
+                    <img class="icono-servicios" src="./images/Counselling.png">
+                </a>
+                
             </div>
         </div>    
     </div>
@@ -250,6 +265,30 @@
         <img class="whatsapp-icon" src="./images/WhatsApp.png">
     </a>
 </section>
+
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".menu-list");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Cierra el menú al hacer click en un enlace
+  document.querySelectorAll(".menu-list a").forEach(link =>
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+</script>
 
     </body>
 </html>

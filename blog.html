@@ -104,19 +104,47 @@
             <p>Hablar no siempre significa comunicarse. La escucha activa y la empatía son pilares del entendimiento mutuo.</p>
         </article>
     </section>
+    
     <section id="whatsapp">
         <a href="https://wa.me/593939283303">
             <img class="whatsapp-icon" src="./images/WhatsApp.png">
         </a>
     </section>
+
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".menu-list");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        // Cierra el menú al hacer click en un enlace
+        document.querySelectorAll(".menu-list a").forEach(link =>
+            link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            })
+        );
+    </script>
+
+
+
     <style>
 body {
     background: linear-gradient(135deg, #e0f7fa 0%, #cfd8dc 100%);
     font-family: "Open Sans", sans-serif;
     color: #333;
-    margin: 0 20px;
+    margin: 0;
     padding: 0;
-    height: 240vh;
+    height: 100vh;
 }
 
 /* Header y menú */
@@ -226,6 +254,125 @@ li {
 }
 .whatsapp-icon {
     height: 50px;
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media (max-width: 480px) {
+
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* --- Menú hamburguesa --- */
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  .menu-list.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #132d2b;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* --- Logo --- */
+  .logo {
+    width: 65px;
+    height: 65px;
+    margin-left: 10px;
+  }
+
+  /* --- Títulos --- */
+  h1 {
+    font-size: 36px;
+    margin-top: 90px;
+  }
+
+  h2 {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* --- Blog grid --- */
+  .blog-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .post {
+    border-radius: 10px;
+  }
+
+  .post img {
+    height: 180px;
+  }
+
+  .post h3 {
+    font-size: 18px;
+  }
+
+  .post p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* --- WhatsApp --- */
+  #whatsapp a {
+    top: 88%;
+    right: 4%;
+  }
+
+  .whatsapp-icon {
+    height: 45px;
+  }
 }
 
     </style>

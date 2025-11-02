@@ -97,12 +97,31 @@
                 </a>
             </section>
 
-                      
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <script>
+                const hamburger = document.querySelector(".hamburger");
+                const navMenu = document.querySelector(".menu-list");
+
+                hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                });
+
+                // Cierra el menú al hacer click en un enlace
+                document.querySelectorAll(".menu-list a").forEach(link =>
+                    link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+                    })
+                );
+            </script>
+
         </header>
-    
-
-
-
 
         <!-- DECORADO CSS -->
          <style>
@@ -264,30 +283,158 @@
            
            
             /* ===== RESPONSIVE ===== */
-            @media (max-width: 768px) {
-            .logo {
-                width: 70px;
-                height: 70px;
+            
+                @media (max-width: 480px) {
+
+                html, body {
+                    overflow-x: hidden;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                * {
+                    box-sizing: border-box;
+                    max-width: 100%;
+                }
+
+                /* --- Menú hamburguesa --- */
+                .menu-list {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 70%;
+                    height: 100vh;
+                    background-color: rgba(255, 255, 255, 0.97);
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 35px;
+                    transition: right 0.4s ease-in-out;
+                    z-index: 1000;
+                }
+
+                .menu-list.active {
+                    right: 0;
+                }
+
+                .menu-btn-link {
+                    font-size: 20px;
+                    color: #132d2b;
+                }
+
+                .hamburger {
+                    display: block;
+                    position: fixed;
+                    top: 25px;
+                    right: 25px;
+                    width: 35px;
+                    height: 28px;
+                    cursor: pointer;
+                    z-index: 1100;
+                }
+
+                .hamburger span {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    background-color: #132d2b;
+                    margin-bottom: 6px;
+                    border-radius: 3px;
+                    transition: all 0.3s ease;
+                }
+
+                .hamburger.active span:nth-child(1) {
+                    transform: rotate(45deg) translate(6px, 6px);
+                }
+
+                .hamburger.active span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .hamburger.active span:nth-child(3) {
+                    transform: rotate(-45deg) translate(6px, -6px);
+                }
+
+                /* --- Logo --- */
+                .logo {
+                    width: 65px;
+                    height: 65px;
+                    margin-left: 10px;
+                }
+
+                /* --- Titulares --- */
+                h1 {
+                    font-size: 32px;
+                    text-align: center;
+                    margin-top: 90px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                /* --- Carrusel --- */
+                .sec-carrusel {
+                    padding: 10px;
+                    margin-top: 25px;
+                }
+
+                .carousel {
+                    width: 95%;
+                    margin: auto;
+                    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+                }
+
+                .slide {
+                    padding: 25px 10px;
+                }
+
+                .slide img {
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: 10px;
+                }
+
+                .slide h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }
+
+                .slide p {
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    padding: 0 10px;
+                    text-align: justify;
+                }
+
+                /* --- Botones del carrusel --- */
+                .carousel-button {
+                    padding: 6px 10px;
+                    font-size: 1.2rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .carousel-button.prev {
+                    left: 5px;
+                }
+
+                .carousel-button.next {
+                    right: 5px;
+                }
+
+                /* --- WhatsApp --- */
+                #whatsapp a {
+                    top: 88%;
+                    right: 4%;
+                }
+
+                .whatsapp-icon {
+                    height: 45px;
+                }
             }
 
-            nav ul {
-                gap: 10px;
-            }
-
-            .titular h1 {
-                font-size: 2.3rem;
-            }
-
-            .slide p {
-                font-size: 0.9rem;
-                padding: 0 10px;
-            }
-
-            .carousel-button {
-                padding: 8px 12px;
-                font-size: 1.3rem;
-            }
-        }
         </style>
         
         <script>
