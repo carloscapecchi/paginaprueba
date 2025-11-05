@@ -1,3 +1,6 @@
+.titulo-servicio {
+  color: white;
+}
 .copywrite {
   font-size: 10px;
   text-align: center;
@@ -325,6 +328,7 @@ p {
 h5 {
     font-size: 18px;
     margin: 0;
+    color: rgb(36, 77, 74);
 }
 .parrafo-blog {
   font-size: 13px;
